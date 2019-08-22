@@ -36,6 +36,9 @@
   <script type="text/javascript">
       $(document).ready(function () {
           console.log("Ready");
+          setTimeout(function(){
+            $("#wa").focus();
+          }, 1000);
           $("#form").on("submit", function(e){
             e.preventDefault();
             var phone = $("#wa").val();
