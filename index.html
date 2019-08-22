@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Redirección a Whatsapp</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center">Abrir chat de Whatsapp</h1>
+        <p class="text-muted">Ingresa el número incluyendo el código de país:</p>
+        <form id="form">
+            <div class="form-group">
+                <input type="number" name="wa" id="wa" class="form-control" autofocus="autofocus" placeholder="573166643721" autocomplete="off">
+            </div>
+            <div class="form-group text-center text-danger" id="msg">
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" name="submit" class="btn btn-success">
+                    <i class="fa fa-whatsapp"></i>
+                    Abrir en Whatsapp
+                </button>
+            </div>
+        </form>
+    </div>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+      $(document).ready(function () {
+          console.log("Ready");
+          $("#form").on("submit", function(e){
+            e.preventDefault();
+            var phone = $("#wa").val();
+            if (/^\d+$/.test(phone)){
+                $("#msg").fadeOut();
+                window.location.href = "https://wa.me/" + phone;
+            }else{
+                $("#msg").text("Ingresa un número válido.").fadeIn();
+                $("#wa").focus();
+            }
+          });
+      });
+  </script>
+</body>
+</html>
