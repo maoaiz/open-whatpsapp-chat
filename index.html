@@ -21,9 +21,13 @@
             <div class="form-group text-center text-danger" id="msg">
             </div>
             <div class="form-group text-center">
-                <button type="submit" name="submit" class="btn btn-success">
+                <button type="button" class="btn btn-success" data-chat="wa">
                     <i class="fa fa-whatsapp"></i>
-                    Abrir en Whatsapp
+                    Abrir chat de Whatsapp
+                </button>
+                <button type="button" class="btn btn-info" data-chat="tg">
+                    <i class="fa fa-whatsapp"></i>
+                    Abrir chat de Telegram
                 </button>
             </div>
         </form>
@@ -39,12 +43,21 @@
           setTimeout(function(){
             $("#wa").focus();
           }, 1000);
-          $("#form").on("submit", function(e){
+          $("#form button").on("click", function(e){
             e.preventDefault();
+            var url = "";
             var phone = $("#wa").val();
+            var chat = $(this).data("chat");
+            if (chat == "wa"){
+                url = "https://wa.me/" + phone;
+            }else{
+                url = "https://t.me/" + phone;
+            }
+            console.log(url)
             if (/^\d+$/.test(phone)){
                 $("#msg").fadeOut();
-                window.location.href = "https://wa.me/" + phone;
+                $("#wa").val("");
+                window.location.href = url
             }else{
                 $("#msg").text("Ingresa un número válido.").fadeIn();
                 $("#wa").focus();
