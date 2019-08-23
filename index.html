@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Redirección a Whatsapp</title>
+    <title>Open in Whatsapp</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link rel="shortcut icon" href="https://static.whatsapp.net/rsrc.php/v3/yP/r/rYZqPCBaG70.png?_nc_x=Ij3Wp8lg5Kz" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25028369-4"></script>
     <script>
@@ -21,9 +22,10 @@
 
 </head>
 <body>
+    <div id="lang"></div>
     <div class="container-fluid">
-        <h1 class="text-center">Abrir chat de Whatsapp</h1>
-        <p class="text-muted">Ingresa el número incluyendo el código de país:</p>
+        <h1 class="text-center i18n-title">Opening Whatsapp chat without add the contact</h1>
+        <p class="text-muted i18n-msj">Input the phone number including the country code:</p>
         <form id="form">
             <div class="form-group">
                 <input type="number" name="wa" id="wa" class="form-control" autofocus="autofocus" placeholder="573166643721" autocomplete="off">
@@ -33,7 +35,7 @@
             <div class="form-group text-center">
                 <button type="button" class="btn btn-success" data-chat="wa">
                     <i class="fa fa-whatsapp"></i>
-                    Abrir chat de Whatsapp
+                    <span class="i18n-button">Open Whatsapp chat</span>
                 </button>
                 <!-- <button type="button" class="btn btn-info" data-chat="tg">
                     <i class="fa fa-whatsapp"></i>
@@ -41,39 +43,16 @@
                 </button> -->
             </div>
         </form>
+
+        <div id="credits" class="container-fluid">
+            <a href="http://mauricioaizaga.com" target="_blank">mauricioaizaga.com</a>
+        </div>
     </div>
 
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-  <script type="text/javascript">
-      $(document).ready(function () {
-          console.log("Ready");
-          setTimeout(function(){
-            $("#wa").focus();
-          }, 1000);
-          $("#form button").on("click", function(e){
-            e.preventDefault();
-            var url = "";
-            var phone = $("#wa").val();
-            var chat = $(this).data("chat");
-            if (chat == "wa"){
-                url = "https://wa.me/" + phone;
-            }else{
-                url = "https://t.me/" + phone;
-            }
-            console.log(url)
-            if (/^\d+$/.test(phone)){
-                $("#msg").fadeOut();
-                $("#wa").val("");
-                window.location.href = url
-            }else{
-                $("#msg").text("Ingresa un número válido.").fadeIn();
-                $("#wa").focus();
-            }
-          });
-      });
-  </script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
