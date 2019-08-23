@@ -10,6 +10,17 @@ $(document).ready(function(){
         $(".i18n-msj").text("Ingresa el número incluyendo el código de país:");
         $(".i18n-button").text("Abrir chat de Whatsapp");
     }
+
+    $.getJSON('https://get.geojs.io/v1/ip/country.json', function(data) {
+      var code = data["country"];
+      $.getJSON('https://restcountries.eu/rest/v2/alpha/'+code, function(data) {
+        var country_prefix = data.callingCodes[0];
+        $("#wa").val(country_prefix).focus();
+      });
+
+    });
+
+
 });
 
 function enable_form() {
