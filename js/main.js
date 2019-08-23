@@ -16,6 +16,10 @@ function enable_form() {
     setTimeout(function(){
         $("#wa").focus();
     }, 1000);
+    $("#form").on("submit", function(e){
+        e.preventDefault();
+        $("#btn-wa").click();
+    });
     $("#form button").on("click", function(e){
     e.preventDefault();
     var url = "";
