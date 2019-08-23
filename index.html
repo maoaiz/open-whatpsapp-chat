@@ -22,13 +22,12 @@
 
 </head>
 <body>
-    <div id="lang"></div>
     <div class="container-fluid">
         <h1 class="text-center i18n-title">Opening Whatsapp chat without add the contact</h1>
         <p class="text-muted i18n-msj">Input the phone number including the country code:</p>
         <form id="form">
             <div class="form-group">
-                <input type="number" name="wa" id="wa" class="form-control" autofocus="autofocus" placeholder="573166643721" autocomplete="off">
+                <input type="number" name="wa" id="wa" class="form-control" autofocus="autofocus" placeholder="573166643721" autocomplete="off" min=0>
             </div>
             <div class="form-group text-center text-danger" id="msg">
             </div>
@@ -44,10 +43,12 @@
             </div>
         </form>
 
-        <div id="credits" class="container-fluid">
-            <a href="http://mauricioaizaga.com" target="_blank">mauricioaizaga.com</a>
-        </div>
     </div>
+    <footer class="footer text-center">
+      <div class="container">
+        <span class="text-muted">Developed by <a href="http://mauricioaizaga.com" target="_blank">mauricioaizaga.com</a></span>
+      </div>
+    </footer>
 
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
