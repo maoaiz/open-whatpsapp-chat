@@ -12,6 +12,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" href="node_modules/intl-tel-input/build/css/intlTelInput.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25028369-4"></script>
@@ -26,11 +27,11 @@
 </head>
 <body>
     <div class="container-fluid">
-        <h1 class="text-center i18n-title">Opening Whatsapp chat without add the contact</h1>
+        <h1 class="text-center i18n-title">Opening Whatsapp chat without adding the contact</h1>
         <p class="text-muted i18n-msj">Input the phone number including the country code:</p>
         <form id="form">
-            <div class="form-group">
-                <input type="number" name="wa" id="wa" class="form-control" autofocus="autofocus" placeholder="573166643721" autocomplete="off" min=0>
+            <div class="form-group text-center">
+                <input type="tel" name="wa" id="wa" class="form-control" autofocus="autofocus" autocomplete="off" min=0>
             </div>
             <div class="form-group text-center text-danger" id="msg">
             </div>
@@ -39,17 +40,13 @@
                     <i class="fa fa-whatsapp"></i>
                     <span class="i18n-button">Open Whatsapp chat</span>
                 </button>
-                <!-- <button type="button" class="btn btn-info" data-chat="tg">
-                    <i class="fa fa-whatsapp"></i>
-                    Abrir chat de Telegram
-                </button> -->
             </div>
         </form>
 
     </div>
     <footer class="footer text-center">
       <div class="container">
-        <span class="text-muted">Developed by <a href="http://mauricioaizaga.com" target="_blank">mauricioaizaga.com</a></span>
+        <span class="text-muted">Developed by <a href="http://mauricioaizaga.com" target="_blank">mauricioaizaga.com</a> and <a href="https://www.instagram.com/ssantss/" target="_blank">@ssantss</a></span>
       </div>
     </footer>
 
@@ -57,6 +54,7 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
+  <script src="node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

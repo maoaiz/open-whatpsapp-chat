@@ -1,0 +1,14 @@
+{
+  "name": "open-in-whatsapp",
+  "version": "0.0.1",
+  "description": "Form to open chat without adding the contact",
+  "main": "",
+  "author": {
+    "name": "Mauricio Aizaga",
+    "email": "mauricioaizaga@gmail.com"
+  },
+  "dependencies": {
+    "intl-tel-input": "^16.0.2",
+    "jquery": "^3.4.1"
+  }
+}

@@ -6,21 +6,22 @@ $(document).ready(function(){
     var code = userLang.substring(0, 2);
 
     if (code == "es"){
-        $(".i18n-title").text("Abrir chat de Whatsapp sin agregar contacto");
+        $(".i18n-title").text("Abrir chat en Whatsapp sin agregar contacto");
         $(".i18n-msj").text("Ingresa el número incluyendo el código de país:");
-        $(".i18n-button").text("Abrir chat de Whatsapp");
+        $(".i18n-button").text("Abrir chat en Whatsapp");
     }
 
-    $.getJSON('https://get.geojs.io/v1/ip/country.json', function(data) {
-      var code = data["country"];
-      $.getJSON('https://restcountries.eu/rest/v2/alpha/'+code, function(data) {
-        var country_prefix = data.callingCodes[0];
-        $("#wa").val(country_prefix).focus();
-      });
-
+    var input = document.querySelector("#wa");
+    window.intlTelInput(input, {
+      initialCountry: "auto",
+      geoIpLookup: function(callback) {
+        $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+          var countryCode = (resp && resp.country) ? resp.country : "";
+          callback(countryCode);
+        });
+      },
+      utilsScript: "node_modules/intl-tel-input/build/js/utils.js?1562189064761" // just for formatting/placeholders etc
     });
-
-
 });
 
 function enable_form() {

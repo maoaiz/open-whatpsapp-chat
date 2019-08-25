@@ -21,8 +21,6 @@ h1{
     /*border-color: none!important;*/
     box-shadow: none;
 }
-
-
 .i18n-msj{
     text-align: center;
 }
@@ -30,6 +28,14 @@ h1{
   color: #ddd!important;
   opacity: 1;
 }
+
+.iti__flag {background-image: url("../node_modules/intl-tel-input/build/img/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("../node_modules/intl-tel-input/build/img/flags@2x.png");}
+}
+
+
 
 @media only screen and (min-width : 480px) {
     .container-fluid {
