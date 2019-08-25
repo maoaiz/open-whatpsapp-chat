@@ -5,7 +5,7 @@ $(document).ready(function(){
 
     if (code == "es"){
         $(".i18n-title").text("Abrir chat en Whatsapp sin agregar contacto");
-        $(".i18n-msj").text("Ingresa el número incluyendo el código de país:");
+        $(".i18n-msj").text("Ingresa el número de Whatsapp con el que quieres chatear:");
         $(".i18n-button").text("Abrir chat en Whatsapp");
     }
 
