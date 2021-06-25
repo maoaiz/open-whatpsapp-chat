@@ -1,0 +1,47 @@
+{
+
+    "short_name": "Open in Whatsapp",
+    "name": "Abrir chat en Whatsapp",
+    "icons": [
+
+        {
+            "src": "/images/Android/Icon-72.png",
+            "size": "72X72",
+            "type": "image/png",
+            "density": 1.5
+        },
+        {
+            "src": "/images/Android/Icon-96.png",
+            "size": "96X96",
+            "type": "image/png",
+            "density": 2
+        },
+        {
+            "src": "/images/Android/Icon-144.png",
+            "size": "144X144",
+            "type": "image/png",
+            "density": 3
+        },
+        {
+            "src": "/images/iOS//images/iOS/touch-icon-iphone.png",
+            "size": "128X128",
+            "type": "image/png",
+            "density": 3
+        },
+        {
+            "src": "/images/Android/Icon-192.png",
+            "size": "192X192",
+            "type": "image/png",
+            "density": 4
+        }
+
+    ],
+
+    "start_url": "index.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "backgroun_color": "#888888",
+    "theme_color": "#9e2123"
+
+
+}
