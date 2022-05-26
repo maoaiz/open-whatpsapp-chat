@@ -10,5 +10,8 @@
   "dependencies": {
     "intl-tel-input": "^16.0.2",
     "jquery": "^3.4.1"
+    },
+  "devDependencies": {
+    "serve": "^13.0.2"
   }
 }

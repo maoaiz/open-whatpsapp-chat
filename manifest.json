@@ -1,6 +1,6 @@
 {
 
-    "short_name": "Open in Whatsapp",
+    "short_name": "Open Whatsapp",
     "name": "Abrir chat en Whatsapp",
     "icons": [
 
@@ -23,7 +23,7 @@
             "density": 3
         },
         {
-            "src": "/images/iOS//images/iOS/touch-icon-iphone.png",
+            "src": "/images/iOS/images/iOS/touch-icon-iphone.png",
             "size": "128X128",
             "type": "image/png",
             "density": 3
@@ -38,10 +38,10 @@
     ],
 
     "start_url": "index.html",
-    "display": "standalone",
+    "display": "standalone", 
     "orientation": "portrait",
     "backgroun_color": "#888888",
-    "theme_color": "#9e2123"
+    "theme_color": "#5CB85C"
 
 
 }

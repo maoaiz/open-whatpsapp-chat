@@ -2,4 +2,4 @@
 
 Ingresa el número con el que quieras chatear y la página abre whatsapp con el chat de ese número.
 
-Pruébalo en [wa.mauricioaizaga.com](http://wa.mauricioaizaga.com)
+Pruébalo en [wa.mauricioaizaga.com](https://wa.mauricioaizaga.com)

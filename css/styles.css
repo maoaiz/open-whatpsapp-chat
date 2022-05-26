@@ -11,6 +11,7 @@ h1{
 }
 .container-fluid{
     margin-top: 40px;
+    max-width:300px;
 }
 .btn-success{
     color: #fff;
@@ -36,17 +37,10 @@ h1{
 }
 
 
-
-@media only screen and (min-width : 480px) {
-    .container-fluid {
-        /*color: red;*/
-        max-width:300px;
-    }
-}
-
 @media only screen and (max-width : 480px) {
-    .container {
-    }
+    .container-fluid {
+      margin-top: 230px;
+  }
 }
 
 /* Sticky footer styles
